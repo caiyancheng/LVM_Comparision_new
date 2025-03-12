@@ -1,0 +1,28 @@
+clear all;
+clc;
+CSF_model = CSF_castleCSF();
+
+spatial_frequency_list = logspace(log10(0.5),log10(32), 100);
+luminance_list = logspace(log10(0.1),log10(1000), 5);
+area_list = logspace(log10(0.1),log10(1000), 5);
+
+S_list = CSF_model.sensitivity(csf_pars);
+x_ticks = [0.5, ]
+ha = tight_subplot(len(luminance_list), len(area_list), [.13 .023],[.16 .01],[.09 .01]);
+for luminance_index = 1:len(luminance_list)
+    luminance_value = luminance_list(luminance_index);
+    for area_index = 1:len(area_list)
+        area_value = area_list(area_index);
+        plot_index = (luminance_index-1) * len(area_list) + area_index;
+        axes(ha(plot_index));
+        csf_pars = struct('s_frequency', spatial_frequency_list, 't_frequency', 0, 'orientation', 0, ...
+            'luminance', luminance_value, 'eccentricity', 0, 'area', area_value);
+        sensitivity_list = CSF_model.sensitivity(csf_pars);
+        set(gca, 'XScale', 'log', 'XTick', [0.5, 1, 2, 4, 8], 'XTickLabel', [0.5, 1, 2, 4, 8]);
+        set(gca, 'YScale', 'log', 'YTick', [0.001, 0.01, 0.1], 'YTickLabel', [0.001, 0.01, 0.1]);
+        xlabel('Spatial Frequency (cpd)');
+        ylabel('Sensitivity');
+        plot(spatial_frequency_list, sensitivity_list)
+    end
+end
+

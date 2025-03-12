@@ -1,0 +1,17 @@
+from Feature_Similarity_paper_report_auto.model_zoo import *
+
+# openclip_instance = openclip_tools()
+# openclip_instance.compute_params_flops()
+# dino_instance = dino_tools()
+# dino_instance.compute_params_flops()
+# dinov2_instance = dinov2_tools()
+# dinov2_instance.compute_params_flops()
+# cvvdp_tools_rafal_instance = cvvdp_tools_rafal()
+# mae_instance = mae_tools()
+# mae_instance.compute_params_flops()
+# sam_float_instance = sam_float_tools()
+# sam_float_instance.compute_params_flops()
+# sam2_float_instance = sam2_float_tools()
+# sam2_float_instance.compute_params_flops()
+vae_instance = vae_tools()
+vae_instance.compute_params_flops()
