@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CVPR 2025 Results</title>
+        <style>
+                table {
+                        max-width: 100%;
+                        border-collapse: collapse;
+                        margin: 50px;
+                }
+
+                table,
+                th,
+                td {
+                        border: 1px solid black;
+                }
+
+                th,
+                td {
+                        padding: 5px;
+                        text-align: center;
+                }
+
+                img {
+                        max-width: 300px;
+                        height: auto;
+                }
+
+                .thick-line {
+                        border-bottom: 10px solid rgb(8, 66, 175);
+                }
+
+                .flex-container {
+                        display: flex;
+                        flex-direction: row;
+                        /* justify-content: space-between; */
+                        gap: 20px;
+                }
+        </style>
+</head>
+
+<body>
+        <div class="flex-container">
+                <div>
+                        <h1>Contrast Detection</h1>
+
+                        <table>
+                                <thead>
+                                        <tr>
+                                                <th>Model Name</th>
+                                                <th>Spatial Frequency (Ach - Gabor)</th>
+                                                <th>Spatial Frequency (Ach - Noise)</th>
+                                                <th>Spatial Frequency (RG - Gabor)</th>
+                                                <th>Spatial Frequency (YV - Gabor)</th>
+                                                <th>Luminance</th>
+                                                <th>Area</th>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <tr class="thick-line">
+                                                <td>[No Encoder]</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/no_encoder/no_encoder-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/no_encoder/no_encoder-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/no_encoder/no_encoder-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/no_encoder/no_encoder-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/no_encoder/no_encoder-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/no_encoder/no_encoder-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[HVS Model] ColorVideoVDP - SDR</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/cvvdp/cvvdp-JOD_scale_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/cvvdp/cvvdp-JOD_scale_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/cvvdp/cvvdp-JOD_scale_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/cvvdp/cvvdp-JOD_scale_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/cvvdp/cvvdp-JOD_scale_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/cvvdp/cvvdp-JOD_scale_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[HVS Model] ColorVideoVDP - HDR</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/cvvdp_hdr/cvvdp_hdr-JOD_scale_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/cvvdp_hdr/cvvdp_hdr-JOD_scale_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/cvvdp_hdr/cvvdp_hdr-JOD_scale_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/cvvdp_hdr/cvvdp_hdr-JOD_scale_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/cvvdp_hdr/cvvdp_hdr-JOD_scale_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/cvvdp_hdr/cvvdp_hdr-JOD_scale_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <!-- DINOv1 -->
+                                        <tr>
+                                                <td>[DINO] <br> dino_resnet50</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dino/dino_resnet50-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dino/dino_resnet50-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dino/dino_resnet50-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dino/dino_resnet50-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dino/dino_resnet50-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dino/dino_resnet50-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_vits16</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dino/dino_vits16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dino/dino_vits16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dino/dino_vits16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dino/dino_vits16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dino/dino_vits16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dino/dino_vits16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_vits8</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dino/dino_vits8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dino/dino_vits8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dino/dino_vits8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dino/dino_vits8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dino/dino_vits8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dino/dino_vits8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_vitb16</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dino/dino_vitb16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dino/dino_vitb16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dino/dino_vitb16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dino/dino_vitb16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dino/dino_vitb16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dino/dino_vitb16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_vitb8</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dino/dino_vitb8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dino/dino_vitb8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dino/dino_vitb8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dino/dino_vitb8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dino/dino_vitb8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dino/dino_vitb8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_xcit_small_12_p16</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dino/dino_xcit_small_12_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dino/dino_xcit_small_12_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dino/dino_xcit_small_12_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dino/dino_xcit_small_12_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dino/dino_xcit_small_12_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dino/dino_xcit_small_12_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_xcit_small_12_p8</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dino/dino_xcit_small_12_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dino/dino_xcit_small_12_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dino/dino_xcit_small_12_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dino/dino_xcit_small_12_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dino/dino_xcit_small_12_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dino/dino_xcit_small_12_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_xcit_medium_24_p16</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dino/dino_xcit_medium_24_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dino/dino_xcit_medium_24_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dino/dino_xcit_medium_24_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dino/dino_xcit_medium_24_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dino/dino_xcit_medium_24_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dino/dino_xcit_medium_24_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[DINO] <br> dino_xcit_medium_24_p8</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dino/dino_xcit_medium_24_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dino/dino_xcit_medium_24_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dino/dino_xcit_medium_24_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dino/dino_xcit_medium_24_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dino/dino_xcit_medium_24_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dino/dino_xcit_medium_24_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <!-- DINOv2 -->
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vits14</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dinov2/dinov2_vits14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dinov2/dinov2_vits14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dinov2/dinov2_vits14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dinov2/dinov2_vits14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dinov2/dinov2_vits14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dinov2/dinov2_vits14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vits14_reg</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dinov2/dinov2_vits14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dinov2/dinov2_vits14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dinov2/dinov2_vits14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dinov2/dinov2_vits14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dinov2/dinov2_vits14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dinov2/dinov2_vits14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitb14</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dinov2/dinov2_vitb14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dinov2/dinov2_vitb14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dinov2/dinov2_vitb14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dinov2/dinov2_vitb14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dinov2/dinov2_vitb14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dinov2/dinov2_vitb14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitb14_reg</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dinov2/dinov2_vitb14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dinov2/dinov2_vitb14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dinov2/dinov2_vitb14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dinov2/dinov2_vitb14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dinov2/dinov2_vitb14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dinov2/dinov2_vitb14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitl14</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dinov2/dinov2_vitl14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dinov2/dinov2_vitl14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dinov2/dinov2_vitl14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dinov2/dinov2_vitl14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dinov2/dinov2_vitl14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dinov2/dinov2_vitl14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitl14_reg</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dinov2/dinov2_vitl14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dinov2/dinov2_vitl14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dinov2/dinov2_vitl14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dinov2/dinov2_vitl14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dinov2/dinov2_vitl14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dinov2/dinov2_vitl14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitg14</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dinov2/dinov2_vitg14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dinov2/dinov2_vitg14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dinov2/dinov2_vitg14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dinov2/dinov2_vitg14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dinov2/dinov2_vitg14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dinov2/dinov2_vitg14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[DINOv2] <br> dinov2_vitg14_reg</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/dinov2/dinov2_vitg14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/dinov2/dinov2_vitg14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/dinov2/dinov2_vitg14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/dinov2/dinov2_vitg14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/dinov2/dinov2_vitg14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/dinov2/dinov2_vitg14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- SAM -->
+                                        <tr>
+                                                <td>[SAM]<br>SAM - vit-sam-base</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/sam/sam_vit_b_01ec64-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/sam/sam_vit_b_01ec64-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/sam/sam_vit_b_01ec64-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/sam/sam_vit_b_01ec64-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/sam/sam_vit_b_01ec64-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/sam/sam_vit_b_01ec64-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[SAM]<br>SAM - vit-sam-large</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/sam/sam_vit_l_0b3195-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/sam/sam_vit_l_0b3195-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/sam/sam_vit_l_0b3195-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/sam/sam_vit_l_0b3195-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/sam/sam_vit_l_0b3195-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/sam/sam_vit_l_0b3195-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[SAM]<br>SAM - vit-sam-huge</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/sam/sam_vit_h_4b8939-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/sam/sam_vit_h_4b8939-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/sam/sam_vit_h_4b8939-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/sam/sam_vit_h_4b8939-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/sam/sam_vit_h_4b8939-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/sam/sam_vit_h_4b8939-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- SAM 2 -->
+                                        <tr>
+                                                <td>[SAM-2]<br>SAM - SAM2.1-hiera-tiny</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/sam2/sam2.1_hiera_tiny-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/sam2/sam2.1_hiera_tiny-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/sam2/sam2.1_hiera_tiny-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/sam2/sam2.1_hiera_tiny-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/sam2/sam2.1_hiera_tiny-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/sam2/sam2.1_hiera_tiny-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[SAM-2]<br>SAM - SAM2.1-hiera-S</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/sam2/sam2.1_hiera_small-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/sam2/sam2.1_hiera_small-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/sam2/sam2.1_hiera_small-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/sam2/sam2.1_hiera_small-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/sam2/sam2.1_hiera_small-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/sam2/sam2.1_hiera_small-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[SAM-2]<br>SAM - SAM2.1-hiera-B+</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/sam2/sam2.1_hiera_base_plus-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/sam2/sam2.1_hiera_base_plus-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/sam2/sam2.1_hiera_base_plus-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/sam2/sam2.1_hiera_base_plus-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/sam2/sam2.1_hiera_base_plus-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/sam2/sam2.1_hiera_base_plus-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[SAM-2]<br>SAM - SAM2.1-hiera-L</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/sam2/sam2.1_hiera_large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/sam2/sam2.1_hiera_large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/sam2/sam2.1_hiera_large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/sam2/sam2.1_hiera_large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/sam2/sam2.1_hiera_large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/sam2/sam2.1_hiera_large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- MAE -->
+                                        <tr>
+                                                <td>[MAE] <br> MAE - vit-mae-base</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/mae/vit-mae-base-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/mae/vit-mae-base-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/mae/vit-mae-base-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/mae/vit-mae-base-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/mae/vit-mae-base-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/mae/vit-mae-base-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[MAE] <br> MAE - vit-mae-large</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/mae/vit-mae-large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/mae/vit-mae-large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/mae/vit-mae-large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/mae/vit-mae-large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/mae/vit-mae-large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/mae/vit-mae-large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[MAE] <br> MAE - vit-mae-huge</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/mae/vit-mae-huge-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/mae/vit-mae-huge-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/mae/vit-mae-huge-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/mae/vit-mae-huge-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/mae/vit-mae-huge-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/mae/vit-mae-huge-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- VAE -->
+                                        <tr>
+                                                <td>[VAE] <br> VAE - stable-diffusion-v1-5</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/vae/stable-diffusion-v1-5-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/vae/stable-diffusion-v1-5-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/vae/stable-diffusion-v1-5-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/vae/stable-diffusion-v1-5-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/vae/stable-diffusion-v1-5-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/vae/stable-diffusion-v1-5-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[VAE] <br> VAE - stable-diffusion-xl-base-1.0</td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/vae/stable-diffusion-xl-base-1.0-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/vae/stable-diffusion-xl-base-1.0-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/vae/stable-diffusion-xl-base-1.0-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/vae/stable-diffusion-xl-base-1.0-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/vae/stable-diffusion-xl-base-1.0-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/vae/stable-diffusion-xl-base-1.0-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- CLIP -->
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ResNet50 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/RN50_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/RN50_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/RN50_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/RN50_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/RN50_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/RN50_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ResNet50 - yfcc15m </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/RN50_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/RN50_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/RN50_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/RN50_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/RN50_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/RN50_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ResNet101 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/RN101_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/RN101_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/RN101_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/RN101_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/RN101_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/RN101_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ResNet101 - yfcc15m </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/RN101_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/RN101_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/RN101_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/RN101_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/RN101_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/RN101_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-B-32 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/ViT-B-32_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/ViT-B-32_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/ViT-B-32_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/ViT-B-32_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/ViT-B-32_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/ViT-B-32_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-B-32 - <br> laion2b_s34b_b79k </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/ViT-B-32_laion2b_s34b_b79k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/ViT-B-32_laion2b_s34b_b79k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/ViT-B-32_laion2b_s34b_b79k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/ViT-B-32_laion2b_s34b_b79k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/ViT-B-32_laion2b_s34b_b79k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/ViT-B-32_laion2b_s34b_b79k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-B-16 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/ViT-B-16_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/ViT-B-16_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/ViT-B-16_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/ViT-B-16_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/ViT-B-16_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/ViT-B-16_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-B-16 - <br> laion2b_s34b_b88k </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/ViT-B-16_laion2b_s34b_b88k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/ViT-B-16_laion2b_s34b_b88k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/ViT-B-16_laion2b_s34b_b88k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/ViT-B-16_laion2b_s34b_b88k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/ViT-B-16_laion2b_s34b_b88k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/ViT-B-16_laion2b_s34b_b88k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-L-14 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/ViT-L-14_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/ViT-L-14_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/ViT-L-14_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/ViT-L-14_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/ViT-L-14_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/ViT-L-14_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-L-14 - <br> laion2b_s32b_b82k </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/ViT-L-14_laion2b_s32b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/ViT-L-14_laion2b_s32b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/ViT-L-14_laion2b_s32b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/ViT-L-14_laion2b_s32b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/ViT-L-14_laion2b_s32b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/ViT-L-14_laion2b_s32b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - convnext_base_w - <br> laion2b_s13b_b82k </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/convnext_base_w_laion2b_s13b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/convnext_base_w_laion2b_s13b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/convnext_base_w_laion2b_s13b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/convnext_base_w_laion2b_s13b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/convnext_base_w_laion2b_s13b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/convnext_base_w_laion2b_s13b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - convnext_base_w - <br> laion2b_s13b_b82k_augreg
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/convnext_base_w_laion2b_s13b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/convnext_base_w_laion2b_s13b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/convnext_base_w_laion2b_s13b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/convnext_base_w_laion2b_s13b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/convnext_base_w_laion2b_s13b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/convnext_base_w_laion2b_s13b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - convnext_large_d - <br> laion2b_s26b_b102k_augreg
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/convnext_large_d_laion2b_s26b_b102k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/convnext_large_d_laion2b_s26b_b102k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/convnext_large_d_laion2b_s26b_b102k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/convnext_large_d_laion2b_s26b_b102k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/convnext_large_d_laion2b_s26b_b102k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/convnext_large_d_laion2b_s26b_b102k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - convnext_xxlarge - <br> laion2b_s13b_b82k_augreg
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_ach/openclip/convnext_xxlarge_laion2b_s34b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Noise_ach/openclip/convnext_xxlarge_laion2b_s34b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_RG/openclip/convnext_xxlarge_laion2b_s34b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_SpF_Gabor_YV/openclip/convnext_xxlarge_laion2b_s34b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_luminance/openclip/convnext_xxlarge_laion2b_s34b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_detection_area/openclip/convnext_xxlarge_laion2b_s34b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                </tbody>
+                        </table>
+                </div>
+
+        
+                <!-- Contrast Masking -->
+                <div>
+                        <h1>Contrast Masking</h1>
+
+                        <table>
+                                <thead>
+                                        <tr>
+                                                <th>Model Name</th>
+                                                <th>Phase-Coherent Masking</th>
+                                                <th>Phase-Incoherent Masking</th>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <!-- baseline -->
+                                        <tr class="thick-line">
+                                                <td>[No Encoder]</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/no_encoder/no_encoder-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/no_encoder/no_encoder-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <!-- ColorVideoVDP -->
+                                        <tr>
+                                                <td>[HVS Model] ColorVideoVDP-SDR</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/cvvdp/cvvdp-JOD_scale_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/cvvdp/cvvdp-JOD_scale_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[HVS Model] ColorVideoVDP-HDR</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/cvvdp_hdr/cvvdp_hdr-JOD_scale_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/cvvdp_hdr/cvvdp_hdr-JOD_scale_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <!-- DINOv1 -->
+                                        <tr>
+                                                <td>[DINO] <br> dino_resnet50</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dino/dino_resnet50-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dino/dino_resnet50-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_vits16</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dino/dino_vits16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dino/dino_vits16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_vits8</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dino/dino_vits8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dino/dino_vits8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_vitb16</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dino/dino_vitb16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dino/dino_vitb16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_vitb8</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dino/dino_vitb8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dino/dino_vitb8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_xcit_small_12_p16</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dino/dino_xcit_small_12_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dino/dino_xcit_small_12_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_xcit_small_12_p8</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dino/dino_xcit_small_12_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dino/dino_xcit_small_12_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_xcit_medium_24_p16</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dino/dino_xcit_medium_24_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dino/dino_xcit_medium_24_p16-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[DINO] <br> dino_xcit_medium_24_p8</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dino/dino_xcit_medium_24_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dino/dino_xcit_medium_24_p8-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- DINOv2 -->
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vits14</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dinov2/dinov2_vits14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dinov2/dinov2_vits14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vits14_reg</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dinov2/dinov2_vits14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dinov2/dinov2_vits14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitb14</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dinov2/dinov2_vitb14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dinov2/dinov2_vitb14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitb14_reg</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dinov2/dinov2_vitb14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dinov2/dinov2_vitb14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitl14</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dinov2/dinov2_vitl14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dinov2/dinov2_vitl14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitl14_reg</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dinov2/dinov2_vitl14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dinov2/dinov2_vitl14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitg14</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dinov2/dinov2_vitg14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dinov2/dinov2_vitg14-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[DINOv2] <br> dinov2_vitg14_reg</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/dinov2/dinov2_vitg14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/dinov2/dinov2_vitg14_reg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- SAM -->
+                                        <tr>
+                                                <td>[SAM]<br>SAM - vit-sam-base</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/sam/sam_vit_b_01ec64-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/sam/sam_vit_b_01ec64-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[SAM]<br>SAM - vit-sam-large</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/sam/sam_vit_l_0b3195-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/sam/sam_vit_l_0b3195-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[SAM]<br>SAM - vit-sam-huge</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/sam/sam_vit_h_4b8939-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/sam/sam_vit_h_4b8939-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- SAM 2 -->
+                                        <tr>
+                                                <td>[SAM-2]<br>SAM - SAM2.1-hiera-tiny</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/sam2/sam2.1_hiera_tiny-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/sam2/sam2.1_hiera_tiny-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[SAM-2]<br>SAM - SAM2.1-hiera-S</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/sam2/sam2.1_hiera_small-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/sam2/sam2.1_hiera_small-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[SAM-2]<br>SAM - SAM2.1-hiera-B+</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/sam2/sam2.1_hiera_base_plus-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/sam2/sam2.1_hiera_base_plus-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[SAM-2]<br>SAM - SAM2.1-hiera-L</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/sam2/sam2.1_hiera_large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/sam2/sam2.1_hiera_large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- MAE -->
+                                        <tr>
+                                                <td>[MAE] <br> MAE - vit-mae-base</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/mae/vit-mae-base-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/mae/vit-mae-base-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[MAE] <br> MAE - vit-mae-large</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/mae/vit-mae-large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/mae/vit-mae-large-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[MAE] <br> MAE - vit-mae-huge</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/mae/vit-mae-huge-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/mae/vit-mae-huge-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- VAE -->
+                                        <tr>
+                                                <td>[VAE] <br> VAE - stable-diffusion-v1-5</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/vae/stable-diffusion-v1-5-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/vae/stable-diffusion-v1-5-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[VAE] <br> VAE - stable-diffusion-xl-base-1.0</td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/vae/stable-diffusion-xl-base-1.0-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/vae/stable-diffusion-xl-base-1.0-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- CLIP -->
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ResNet50 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/RN50_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/RN50_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ResNet50 - yfcc15m </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/RN50_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/RN50_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ResNet101 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/RN101_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/RN101_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ResNet101 - yfcc15m </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/RN101_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/RN101_yfcc15m-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-B-32 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/ViT-B-32_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/ViT-B-32_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-B-32 - <br> laion2b_s34b_b79k </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/ViT-B-32_laion2b_s34b_b79k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/ViT-B-32_laion2b_s34b_b79k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-B-16 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/ViT-B-16_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/ViT-B-16_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-B-16 - <br> laion2b_s34b_b88k </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/ViT-B-16_laion2b_s34b_b88k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/ViT-B-16_laion2b_s34b_b88k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-L-14 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/ViT-L-14_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/ViT-L-14_openai-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-L-14 - <br> laion2b_s32b_b82k </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/ViT-L-14_laion2b_s32b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/ViT-L-14_laion2b_s32b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - convnext_base_w - <br> laion2b_s13b_b82k </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/convnext_base_w_laion2b_s13b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/convnext_base_w_laion2b_s13b_b82k-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - convnext_base_w - <br> laion2b_s13b_b82k_augreg
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/convnext_base_w_laion2b_s13b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/convnext_base_w_laion2b_s13b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - convnext_large_d - <br> laion2b_s26b_b102k_augreg
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/convnext_large_d_laion2b_s26b_b102k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/convnext_large_d_laion2b_s26b_b102k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - convnext_xxlarge - <br> laion2b_s13b_b82k_augreg
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_coherent_masking/openclip/convnext_xxlarge_laion2b_s34b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_masking_phase_incoherent_masking/openclip/convnext_xxlarge_laion2b_s34b_b82k_augreg-arccos_cos_similarity_matrix.png">
+                                                </td>
+                                        </tr>
+                                </tbody>
+                        </table>
+                </div>
+
+
+                <!-- Contrast Masking -->
+                <div>
+                        <h1>Suprathreshoold Contrast Matching</h1>
+
+                        <table>
+                                <thead>
+                                        <tr>
+                                                <th>Model Name</th>
+                                                <th>Contrast Matching</th>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <!-- baseline -->
+                                        <tr class="thick-line">
+                                                <td>[No Encoder]</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/no_encoder/no_encoder-cos.png">
+                                                </td>
+                                        </tr>
+                                        <!-- ColorVideoVDP -->
+                                        <tr>
+                                                <td>[HVS Model] ColorVideoVDP-SDR</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/cvvdp/cvvdp-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[HVS Model] ColorVideoVDP-HDR</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/cvvdp_hdr/cvvdp_hdr-cos.png">
+                                                </td>
+                                        </tr>
+                                        <!-- DINOv1 -->
+                                        <tr>
+                                                <td>[DINO] <br> dino_resnet50</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dino/dino_resnet50-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_vits16</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dino/dino_vits16-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_vits8</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dino/dino_vits8-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_vitb16</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dino/dino_vitb16-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_vitb8</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dino/dino_vitb8-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_xcit_small_12_p16</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dino/dino_xcit_small_12_p16-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_xcit_small_12_p8</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dino/dino_xcit_small_12_p8-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINO] <br> dino_xcit_medium_24_p16</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dino/dino_xcit_medium_24_p16-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[DINO] <br> dino_xcit_medium_24_p8</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dino/dino_xcit_medium_24_p8-cos.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- DINOv2 -->
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vits14</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dinov2/dinov2_vits14-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vits14_reg</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dinov2/dinov2_vits14_reg-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitb14</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dinov2/dinov2_vitb14-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitb14_reg</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dinov2/dinov2_vitb14_reg-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitl14</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dinov2/dinov2_vitl14-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitl14_reg</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dinov2/dinov2_vitl14_reg-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[DINOv2] <br> dinov2_vitg14</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dinov2/dinov2_vitg14-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[DINOv2] <br> dinov2_vitg14_reg</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/dinov2/dinov2_vitg14_reg-cos.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- SAM -->
+                                        <tr>
+                                                <td>[SAM]<br>SAM - vit-sam-base</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/sam/sam_vit_b_01ec64-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[SAM]<br>SAM - vit-sam-large</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/sam/sam_vit_l_0b3195-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[SAM]<br>SAM - vit-sam-huge</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/sam/sam_vit_h_4b8939-cos.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- SAM 2 -->
+                                        <tr>
+                                                <td>[SAM-2]<br>SAM - SAM2.1-hiera-tiny</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/sam2/sam2.1_hiera_tiny-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[SAM-2]<br>SAM - SAM2.1-hiera-S</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/sam2/sam2.1_hiera_small-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[SAM-2]<br>SAM - SAM2.1-hiera-B+</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/sam2/sam2.1_hiera_base_plus-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[SAM-2]<br>SAM - SAM2.1-hiera-L</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/sam2/sam2.1_hiera_large-cos.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- MAE -->
+                                        <tr>
+                                                <td>[MAE] <br> MAE - vit-mae-base</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/mae/vit-mae-base-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[MAE] <br> MAE - vit-mae-large</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/mae/vit-mae-large-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[MAE] <br> MAE - vit-mae-huge</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/mae/vit-mae-huge-cos.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- VAE -->
+                                        <tr>
+                                                <td>[VAE] <br> VAE - stable-diffusion-v1-5</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/vae/stable-diffusion-v1-5-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr class="thick-line">
+                                                <td>[VAE] <br> VAE - stable-diffusion-xl-base-1.0</td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/vae/stable-diffusion-xl-base-1.0-cos.png">
+                                                </td>
+                                        </tr>
+
+                                        <!-- CLIP -->
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ResNet50 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/RN50_openai-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ResNet50 - yfcc15m </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/RN50_yfcc15m-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ResNet101 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/RN101_openai-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ResNet101 - yfcc15m </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/RN101_yfcc15m-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-B-32 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/ViT-B-32_openai-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-B-32 - <br> laion2b_s34b_b79k </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/ViT-B-32_laion2b_s34b_b79k-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-B-16 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/ViT-B-16_openai-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-B-16 - <br> laion2b_s34b_b88k </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/ViT-B-16_laion2b_s34b_b88k-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-L-14 - openai </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/ViT-L-14_openai-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - ViT-L-14 - <br> laion2b_s32b_b82k </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/ViT-L-14_laion2b_s32b_b82k-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - convnext_base_w - <br> laion2b_s13b_b82k </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/convnext_base_w_laion2b_s13b_b82k-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - convnext_base_w - <br> laion2b_s13b_b82k_augreg
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/convnext_base_w_laion2b_s13b_b82k_augreg-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - convnext_large_d - <br> laion2b_s26b_b102k_augreg
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/convnext_large_d_laion2b_s26b_b102k_augreg-cos.png">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>[OpenCLIP] <br> CLIP - convnext_xxlarge - <br> laion2b_s13b_b82k_augreg
+                                                </td>
+                                                <td><img src="plot_picts/test_contrast_matching_cos_scale_solve/openclip/convnext_xxlarge_laion2b_s34b_b82k_augreg-cos.png">
+                                                </td>
+                                        </tr>
+                                </tbody>
+                        </table>
+                </div>
+
+                
+        </div>
+
+
+
+
+</body>
+
+</html>
