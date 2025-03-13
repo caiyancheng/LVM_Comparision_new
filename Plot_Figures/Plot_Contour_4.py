@@ -17,7 +17,7 @@ Plot_Row_name_list_1 = ['Spatial Frequency', 'Spatial Frequency', 'Spatial Frequ
                         'Luminance', 'Area', 'Phase-coherent', 'Phase-incoherent', 'Contrast']
 Plot_Row_name_list_2 = ['Gabor Ach.', 'Noise Ach.', 'Gabor RG', 'Gabor YV', 'Gabor Ach.', 'Gabor Ach.', 'Masking', 'Masking', 'Matching']
 
-plot_figs_root_path = r'E:\Py_codes\LVM_Comparision\Feature_Similarity_paper_report_auto\plot_picts'
+plot_figs_root_path = r'E:\Py_codes\LVM_Comparision_new\Feature_Similarity_paper_report_auto\plot_picts'
 
 fig, axes = plt.subplots(len(Row_tests_list), len(Plot_Column_model_name_list), figsize=(18.5, 20.5)) #, dpi=300)
 
@@ -57,5 +57,5 @@ for col in range(len(Plot_Column_model_name_list)):
 
 plt.subplots_adjust(wspace=0.01, hspace=0, left=0.06, right=0.999, top=0.975, bottom=0)
 # 保存图像
-plt.savefig('contour_plot_8.svg', dpi=300)
+plt.savefig('contour_plot_10.svg', dpi=250)
 # plt.show()
